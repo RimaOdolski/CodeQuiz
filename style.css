@@ -1,0 +1,27 @@
+
+
+button {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    background: rgb(145, 92, 182);
+    padding: 15px 40px;
+    border-radius: 4px;
+    font-weight: normal;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+h1{
+text-align: center;
+text-shadow: 0 0 3px rgb(145, 30, 135), 0 0 5px rgb(80, 8, 76);
+
+}
+
+#quizSection{
+    text-align: center;
+}
+
+nav{
+
+    background-color: white !important;
+}

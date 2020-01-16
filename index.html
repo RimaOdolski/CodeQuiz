@@ -4,27 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css" />
     <title> Coding Quiz </title>
+    <style>
+        .hide {
+            display: none;
+        }
+        ul {
+            list-style: none;
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-          <!-- Link to View highscores-->  
+
+    <nav class="navbar navbar-expand-sm">
+        <!-- Link to view high scores. -->  
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#"> View Highscores</a>
+            <li>
+                <a id="score" href="#" style= "color:black"> VIEW HIGH SCORES</a>
             </li>
         </ul>
-                      <!-- Timer -->
+        <!-- Timer placement. -->
         <div class="navbar-nav ml-auto">
-            <a class="navbar-brand" href="#">Timer : </a>
+            <a id="timer" href="#" style= color:black>TIMER: </a>
         </div>
     </nav>
 
-    <!-- Main card where the questions will be loaded-->
-    <div class="container">
-        <div class="card-body"> </div>
-    </div>     
+    <!-- Main body for the quizzes to appear. -->
+    <div class="intro">
+        <h1>Javascript Quiz</h1>
+    </div>
+    <div id="quizSection">
+        <div id="quizMain">
+            <h3>Click on the Start button to begin.</h3>
+            <button type="button" id="startQuiz" onclick="nextQuestion(); startTimer();">Start</button>
+            <p></p>
+        </div>
+    </div>
+    <div id="status"> </div>
+
 </body>
+<script src="questions.js"></script>
+<script src="script.js"></script>
 </html>

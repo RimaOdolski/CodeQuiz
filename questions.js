@@ -11,8 +11,8 @@ var questions = [
     },
     {
         title:"Inside which HTML element do we put the JavaScript?",
-        choices: ["<script>", "<javascript>", "<js>", "<element>" ],
-        answer: "<script>"
+        choices: ["script", "javascript", "js", "element" ],
+        answer: "script"
     },
     {
         title:"How do you write \"Hello World\" in an alert box?",
@@ -23,4 +23,5 @@ var questions = [
         title:"Where is Waldo?",
         choices: ["Antartica", "studying to be a web developer", "minding his own business"],
         answer: "studying to be a web developer"
-    };
+    },
+];
