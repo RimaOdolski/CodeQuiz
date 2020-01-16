@@ -1,9 +1,10 @@
-var timeLeft = 50;
+var timeLeft = 75;
 var currentQuestion = 0;
 var audio = new Audio(
   "http://soundbible.com/mp3/Audience_Applause-Matthiew11-1206899159.mp3"
 );
 var score = 0;
+console.log(score);
 
 function nextQuestion() {
   // This wipes away the quizMain section when the quiz starts.
@@ -51,15 +52,20 @@ function nextQuestion() {
           console.log("index:" + index);
           console.log("array length:" + questionsLength);
           
-           if (index == questionsLength) { 
+           if (index === questionsLength) { 
+              timeLeft = 0;  
+              score += 10;
+              console.log(score);
               document.getElementById("quizMain").innerHTML = "";
               document.getElementById("score").innerHTML = "High Score: " + score;
-              timeLeft = 0;
+
+
            }
            else {
               var correctAnswer = questionsList.answer;
               if (correctAnswer === selectedAnswer) {
                 score += 10;
+                console.log(score);
                 document.getElementById("score").innerHTML =
                 "High Score: " + score;
                 document.getElementById("status").innerHTML =
@@ -88,7 +94,7 @@ function startTimer() {
     timeLeft -= 1;
     if (timeLeft <= 0) {
       clearInterval(downloadTimer);
-      document.getElementById("timer").innerHTML = "Finished.";
+      document.getElementById("timer").innerHTML = "Quiz finished";
     }
   }, 1000);
 }
@@ -99,4 +105,16 @@ function penalizeTimer() {
   document.getElementById("timer").innerHTML = "Timer: " + timeLeft;
 }
 
+function addToHighScores() {
+    addToHighScores.innerHTML = "";
+    const person = {
+        name: document.getElementById("name").value,
+        number: score,
+    }
 
+    // var nameHighScore = document.getElementById("name").value;
+    window.localStorage.setItem('user', JSON.stringify(person));
+    console.log(window.localStorage.getItem('user'));
+    document.getElementById("highScores").innerHTML = window.localStorage.getItem('user');
+
+}   

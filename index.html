@@ -23,12 +23,12 @@
         <!-- Link to view high scores. -->  
         <ul class="navbar-nav mr-auto">
             <li>
-                <a id="score" href="#" style= "color:black"> VIEW HIGH SCORES</a>
+                <a id="score" href="#" style= "color:black">View High Scores</a>
             </li>
         </ul>
         <!-- Timer placement. -->
         <div class="navbar-nav ml-auto">
-            <a id="timer" href="#" style= color:black>TIMER: </a>
+            <a id="timer" href="#" style= color:black>Timer: 75 </a>
         </div>
     </nav>
 
@@ -44,6 +44,12 @@
         </div>
     </div>
     <div id="status"> </div>
+    <div id="input">
+        Insert your name to be added to the high scores list:<br>
+        <input type="text" name="name" id="name"><br>
+        <button type="submit" value="Submit" onclick="addToHighScores();">
+    </div>
+    <div id="highScores"></div>
 
 </body>
 <script src="questions.js"></script>
