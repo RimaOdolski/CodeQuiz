@@ -7,6 +7,7 @@ var score = 0;
 console.log(score);
 
 function nextQuestion() {
+    
   // This wipes away the quizMain section when the quiz starts.
   quizMain.innerHTML = "";
 
@@ -15,6 +16,7 @@ function nextQuestion() {
 
     if (currentQuestion != index) {
       quizBlock.setAttribute("class", "hide");
+    
     }
 
     // We're creating a questions field in h1.
@@ -94,7 +96,7 @@ function startTimer() {
     timeLeft -= 1;
     if (timeLeft <= 0) {
       clearInterval(downloadTimer);
-      document.getElementById("timer").innerHTML = "Quiz finished";
+      document.getElementById("timer").innerHTML = "Finished";
     }
   }, 1000);
 }
@@ -108,6 +110,7 @@ function penalizeTimer() {
 function addToHighScores() {
     addToHighScores.innerHTML = "";
     const person = {
+        //name:document.createElement('input');
         name: document.getElementById("name").value,
         number: score,
     }
